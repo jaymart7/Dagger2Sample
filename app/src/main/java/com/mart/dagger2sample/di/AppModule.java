@@ -20,7 +20,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public abstract class AppModule {
 
     @Provides
-    static ApiService getApiService() {
+    public static ApiService getApiService() {
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
         logging.setLevel(HttpLoggingInterceptor.Level.BODY);
 

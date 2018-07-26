@@ -20,6 +20,9 @@ android {
         targetCompatibility 1.8
         sourceCompatibility 1.8
     }
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
 }
 
 project.ext {
@@ -50,4 +53,6 @@ dependencies {
 
     implementation 'android.arch.lifecycle:extensions:' + project.lifecycle_version
 //    annotationProcessor 'android.arch.lifecycle:compiler:' + project.lifecycle_version
+
+    testImplementation 'org.mockito:mockito-core:2.7.6'
 }

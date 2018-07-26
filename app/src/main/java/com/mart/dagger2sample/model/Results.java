@@ -17,4 +17,11 @@ public class Results {
     public void setUsersList(List<User> usersList) {
         this.usersList = usersList;
     }
+
+    @Override
+    public String toString() {
+        return "aaResults{" +
+                "usersList=" + usersList +
+                '}';
+    }
 }

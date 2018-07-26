@@ -3,6 +3,7 @@ package com.mart.dagger2sample.ui.main;
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
 import android.arch.lifecycle.MutableLiveData;
+import android.arch.lifecycle.ViewModel;
 import android.support.annotation.NonNull;
 
 import com.mart.dagger2sample.data.UserDataSource;
@@ -12,18 +13,16 @@ import com.mart.dagger2sample.model.Results;
 
 import java.util.Objects;
 
-public class MainViewModel extends AndroidViewModel {
+public class MainViewModel extends ViewModel {
 
     private UserRepository userRepository;
 
     private MutableLiveData<Results> userList;
-    private MutableLiveData<Boolean> isLoading = new MutableLiveData<>();
+    public MutableLiveData<Boolean> isLoading = new MutableLiveData<>();
     private MutableLiveData<ErrorMessage> liveErrorMessage = new MutableLiveData<>();
 
     public MainViewModel(@NonNull Application application, UserRepository userRepository) {
-        super(application);
         this.userRepository = userRepository;
-        application.getApplicationContext();
     }
 
     public MutableLiveData<Results> getUserList() {
