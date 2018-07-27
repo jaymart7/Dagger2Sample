@@ -26,10 +26,12 @@ public class UserRepository implements UserDataSource {
                 .enqueue(new Callback<Results>() {
                     @Override
                     public void onResponse(@NonNull Call<Results> call, @NonNull Response<Results> response) {
-                        if (response.errorBody() == null)
+                        if (response.errorBody() == null) {
                             loadUserCallback.onUserListLoaded(response.body());
-                        else
+                        }
+                        else {
                             loadUserCallback.onFailed(new ErrorMessage(Requests.GET_USER_LIST, getErrorMessage(response.errorBody())));
+                        }
                     }
 
                     @Override

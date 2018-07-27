@@ -1,4 +1,4 @@
-package com.mart.dagger2sample.ui.main.details;
+package com.mart.dagger2sample.ui.details;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -27,7 +27,8 @@ public class DetailsFragment extends DaggerFragment{
     private SwipeRefreshLayout swipeRefreshLayout;
 
     @Inject MainViewModel mainViewModel;
-    @Inject AdapterUsers adapterUsers;
+    @Inject
+    UserAdapter adapterUsers;
     @Inject Context context;
 
     @Nullable

@@ -1,4 +1,4 @@
-package com.mart.dagger2sample.ui.main.details;
+package com.mart.dagger2sample.ui.details;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;

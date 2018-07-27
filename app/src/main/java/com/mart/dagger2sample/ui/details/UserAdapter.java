@@ -1,4 +1,4 @@
-package com.mart.dagger2sample.ui.main.details;
+package com.mart.dagger2sample.ui.details;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -14,7 +14,7 @@ import com.mart.dagger2sample.model.User;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AdapterUsers extends RecyclerView.Adapter<AdapterUsers.MyViewHolder> {
+public class UserAdapter extends RecyclerView.Adapter<UserAdapter.MyViewHolder> {
 
     private List<User> nameList = new ArrayList<>();
 
